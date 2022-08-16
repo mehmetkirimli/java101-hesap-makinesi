@@ -1,0 +1,39 @@
+import javax.swing.*;
+import java.util.Scanner;
+
+public class switc {
+    public static void main(String[] args) {
+        int s1, s2, select;
+        Scanner bjk = new Scanner(System.in);
+        System.out.println("hesap icin birinci sayiyi giriniz  :");
+        s1 = bjk.nextInt();
+        System.out.println("hesap icin ikinci sayiyi giriniz  :");
+        s2 = bjk.nextInt();
+        System.out.println("hesap icin girilen sayilar :" + s1 + " ve " + s2);
+        System.out.println("1-Toplama \n 2-Cikarma \n 3- Carpma \n 4-Bolme ");
+        System.out.println("hesap islemini seciniz ");
+        select = bjk.nextInt();
+
+
+        switch (select) {
+            case 1:
+                System.out.println("Toplama islemi sonucu : " + (s1 + s2));
+                break;
+            case 2:
+                System.out.println("Cikartma isleminizin sonucu " + (s1 - s2));
+                break;
+            case 3:
+                System.out.println("Carpma islemi sonucu : " + (s1 * s2));
+                break;
+            case 4:
+                if (s2 != 0) {
+                    System.out.println("Bolme islemi sonucu : " + (s1 / s2));
+                }else {
+                    System.out.println("Bir sayi sifira bolunemez .");
+                }break;
+            default:
+                System.out.println("hatali deger girisi :");
+
+            }
+        }
+    }
